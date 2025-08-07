@@ -1,6 +1,33 @@
 
-  var slideIndex = 1;
-  showSlides(slideIndex);
+// Navbar scroll effect with throttling
+let lastScroll = 0;
+const scrollThreshold = 50;
+let ticking = false;
+
+function updateNavbar(scrollPos) {
+    const navbar = document.querySelector('.navbar');
+    if (scrollPos > scrollThreshold) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+}
+
+window.addEventListener('scroll', function() {
+    lastScroll = window.scrollY;
+    
+    if (!ticking) {
+        window.requestAnimationFrame(function() {
+            updateNavbar(lastScroll);
+            ticking = false;
+        });
+        
+        ticking = true;
+    }
+});
+
+var slideIndex = 1;
+showSlides(slideIndex);
   
   function plusSlides(n) {
     showSlides(slideIndex += n);
