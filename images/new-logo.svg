@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Mountain background -->
+  <circle cx="256" cy="256" r="240" fill="#2A5D45" />
+  
+  <!-- Mountains -->
+  <path d="M96 352 L256 160 L416 352 Z" fill="#73A69D" />
+  <path d="M160 352 L256 224 L352 352 Z" fill="#1A3225" />
+  
+  <!-- Sun -->
+  <circle cx="350" cy="150" r="40" fill="#E9B872" />
+  
+  <!-- Pine trees -->
+  <path d="M180 352 L200 300 L220 352 Z" fill="#1A3225" />
+  <path d="M190 300 L210 260 L230 300 Z" fill="#1A3225" />
+  <path d="M200 260 L210 230 L220 260 Z" fill="#1A3225" />
+  <rect x="205" y="352" width="10" height="20" fill="#5D4037" />
+  
+  <!-- Hiker silhouette -->
+  <circle cx="140" cy="300" r="10" fill="#263238" />
+  <rect x="138" y="310" width="4" height="20" fill="#263238" />
+  <path d="M138 330 L130 350 M142 330 L150 350" stroke="#263238" stroke-width="3" />
+  <path d="M138 315 L125 325 M142 315 L155 325" stroke="#263238" stroke-width="3" />
+  
+  <!-- Trail -->
+  <path d="M100 352 Q 200 330, 300 352" stroke="#E9B872" stroke-width="3" fill="none" stroke-dasharray="5,5" />
+</svg>
