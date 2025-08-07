@@ -393,9 +393,6 @@ form {
     color: rgb(223, 166, 10);
     font-weight: 600;
 }
-.poster2 {
-    /* border: 1PX solid red; */
-}
 
 .poster2 h3 {
     margin-top: 0px;
@@ -585,7 +582,7 @@ form {
 
 .exploer{
    
-    background-image: url('exploer.png');
+    background-image: url('../images/exploer.png');
     height: 500px;
     background-size: 100% 500px;
 
@@ -977,9 +974,7 @@ margin-top: 180px;
   .author {color: cornflowerblue;}
 
 
-  .bg3img{
-    /* border: 1px solid red; */
-  }
+ 
   .bg3img img{
     /* border: 1px solid rgb(153, 0, 255); */
     height: 200px;
