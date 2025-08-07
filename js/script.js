@@ -53,8 +53,40 @@ showSlides(slideIndex);
     dots[slideIndex-1].className += " active2";
   }
   // sticky navigation bar
-const toggleButton = document.getElementsByClassName('toggle-button')[0]
-const navbarLinks = document.getElementsByClassName('nav-links')[0]
-toggleButton.addEventListener('click',()=>{
-    navbarLinks.classList.toggle('active')
-})
+// Mobile Menu Toggle
+const toggleButton = document.querySelector('.toggle-button');
+const navLinks = document.querySelector('.nav-links');
+
+toggleButton.addEventListener('click', (e) => {
+    e.stopPropagation();
+    navLinks.classList.toggle('active');
+    
+    // Animate hamburger to X
+    const bars = document.querySelectorAll('.bar');
+    bars.forEach(bar => {
+        bar.classList.toggle('active');
+    });
+});
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (!navLinks.contains(e.target) && !toggleButton.contains(e.target)) {
+        navLinks.classList.remove('active');
+        const bars = document.querySelectorAll('.bar');
+        bars.forEach(bar => {
+            bar.classList.remove('active');
+        });
+    }
+});
+
+// Close mobile menu when clicking a link
+const navLinksAll = document.querySelectorAll('.nav-links a');
+navLinksAll.forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        const bars = document.querySelectorAll('.bar');
+        bars.forEach(bar => {
+            bar.classList.remove('active');
+        });
+    });
+});
