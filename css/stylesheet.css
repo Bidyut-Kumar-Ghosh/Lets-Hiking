@@ -83,29 +83,33 @@
     text-transform: uppercase;
     font-size: 0.9rem;
     padding: 8px 15px;
-    transition: var(--transition);
+    transition: all 0.3s ease;
     border-radius: 6px;
     position: relative;
+    background-color: transparent;
 }
 
 .nav-links a::after {
     content: '';
     position: absolute;
     bottom: 0;
-    left: 50%;
-    width: 0;
+    left: 0;
+    width: 100%;
     height: 2px;
     background-color: var(--primary-color);
-    transition: var(--transition);
-    transform: translateX(-50%);
+    transition: transform 0.3s ease;
+    transform: scaleX(0);
+    transform-origin: right;
 }
 
 .nav-links a:hover {
     color: var(--primary-color);
+    background-color: rgba(255, 123, 0, 0.08);
 }
 
 .nav-links a:hover::after {
-    width: 80%;
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
 .toggle-button {
@@ -297,10 +301,11 @@
 
 .scrolled .nav-links li a:hover {
     color: var(--primary-color);
+    background-color: rgba(255, 123, 0, 0.08);
 }
 
-.scrolled .nav-links li a::before {
-    background-color: rgba(0, 0, 0, 0.05);
+.scrolled .nav-links li a::after {
+    background-color: var(--primary-color);
 }
 
 .nav-links ul {
@@ -2706,8 +2711,8 @@ ul{
 	font-size: 16px;
 	text-transform: uppercase;
 	text-decoration: none;
-	font-weight: 300;
-	color: var(--text-light);
+	font-weight: 400;
+	color: var(--text-dark);
 	display: block;
 	transition: var(--transition);
 	position: relative;
@@ -2772,7 +2777,7 @@ ul{
 	left: 100%;
 }
 #copy{
-    color: var(--text-light);
+    color: var(--text-dark);
     text-align: center;
     margin-top: 30px;
     padding: 15px 10px;
@@ -2781,17 +2786,17 @@ ul{
     letter-spacing: 0.5px;
     font-size: 14px;
     border-top: 1px solid rgba(var(--primary-color-rgb), 0.1);
-    text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+    font-weight: 400;
 }
 #about{
-    color: var(--text-light);
+    color: var(--text-dark);
     line-height: 1.6;
     letter-spacing: 0.3px;
 }
 
 
 #place{
-    color: var(--text-light);
+    color: var(--text-dark);
     line-height: 2;
     position: relative;
 }
@@ -2809,7 +2814,7 @@ ul{
 
 #place a{
     text-decoration: none;
-    color: var(--text-light);
+    color: var(--text-dark);
     transition: var(--transition);
     position: relative;
     display: inline-block;
@@ -2929,6 +2934,17 @@ ul{
     .nav-links ul li a {
         display: block;
         padding: 10px 20px;
+        margin: 5px 0;
+        border-radius: 6px;
+    }
+    
+    .nav-links ul li a::after {
+        display: none;
+    }
+    
+    .nav-links ul li a:hover {
+        background-color: rgba(255, 123, 0, 0.08);
+        color: var(--primary-color);
     }
 
     .nav-search form {
