@@ -23,24 +23,31 @@
         width: 100%;
         min-height: 300px;
     }
+    
+    .hero-content {
+        max-width: 90%;
+        padding: 25px;
+    }
 }
 
 @media screen and (max-width: 768px) {
     .hero-content {
-        padding: 100px 20px;
+        padding: 30px 20px;
+        max-width: 95%;
+        background-color: rgba(0, 0, 0, 0.6);
     }
     
     .hero-content h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
     
     .hero-content h2 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
     
     .hero-content p {
         font-size: 1rem;
-        padding: 0 10px;
+        padding: 0 5px;
     }
     
     .poster2, .poster4 {
@@ -72,24 +79,50 @@
     .dot-container {
         padding: 10px;
     }
-}
-
-@media screen and (max-width: 480px) {
+    
     .navbar {
         padding: 0 15px;
     }
     
+    .toggle-button {
+        top: 22px;
+        right: 15px;
+    }
+    
+    .nav-logo img {
+        width: 50px;
+        height: 50px;
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navbar {
+        padding: 0 10px;
+    }
+    
+    .hero-content {
+        padding: 20px 15px;
+        max-width: 100%;
+    }
+    
     .hero-content h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
     
     .hero-content h2 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+    }
+    
+    .hero-content p {
+        font-size: 0.9rem;
     }
     
     .box-btn button, .cta-button {
         width: 100%;
         max-width: 200px;
+        padding: 10px 20px;
+        font-size: 0.9rem;
     }
     
     .slideshow-container {
@@ -98,6 +131,23 @@
     
     .mySlides q {
         font-size: 1rem;
+    }
+    
+    .toggle-button {
+        top: 20px;
+        right: 10px;
+    }
+    
+    .nav-logo img {
+        width: 45px;
+        height: 45px;
+        margin-left: 5px;
+    }
+    
+    .nav-links li a {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
     }
     
     .search input {
