@@ -243,7 +243,7 @@
     font-weight: 600;
     font-size: 15px;
     position: relative;
-    transition: var(--transition);
+    transition: color 0.3s ease, background-color 0.3s ease;
     letter-spacing: 1px;
     border-radius: 4px;
     display: inline-block;
@@ -252,46 +252,30 @@
 }
 
 .nav-links li a::before {
+    display: none;
+}
+
+.nav-links li a::after {
     content: '';
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 2px;
+    height: 3px;
     background-color: var(--primary-color);
     transition: transform 0.3s ease;
-    transform-origin: right;
     transform: scaleX(0);
-    z-index: -1;
-}
-
-.nav-links li a::after {
-    content: attr(data-text);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--primary-color);
-    transform: translateY(100%);
-    transition: transform 0.3s ease;
+    transform-origin: left;
 }
 
 .nav-links li a:hover {
     color: var(--primary-color);
-    text-shadow: 0 0 8px rgba(100, 255, 218, 0.5);
-}
-
-.nav-links li a:hover::before {
-    transform: scaleX(1);
-    transform-origin: left;
+    background-color: rgba(255, 123, 0, 0.1);
 }
 
 .nav-links li a:hover::after {
-    transform: translateY(0);
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
 /* Scrolled state */
@@ -306,6 +290,11 @@
 
 .scrolled .nav-links li a::after {
     background-color: var(--primary-color);
+}
+
+.scrolled .nav-links li a:hover {
+    color: var(--primary-color);
+    background-color: rgba(255, 123, 0, 0.1);
 }
 
 .nav-links ul {
@@ -2943,7 +2932,7 @@ ul{
     }
     
     .nav-links ul li a:hover {
-        background-color: rgba(255, 123, 0, 0.08);
+        background-color: rgba(255, 123, 0, 0.1);
         color: var(--primary-color);
     }
 
