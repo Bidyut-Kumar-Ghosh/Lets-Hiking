@@ -26,6 +26,37 @@ window.addEventListener('scroll', function() {
     }
 });
 
+// Toggle navigation menu for mobile
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleButton = document.querySelector('.toggle-button');
+    const navLinks = document.querySelector('.nav-links');
+    const bars = document.querySelectorAll('.toggle-button .bar');
+    
+    if (toggleButton && navLinks) {
+        toggleButton.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+            
+            // Animate the bars to form an X
+            bars.forEach(bar => {
+                bar.classList.toggle('active');
+            });
+        });
+    }
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(event) {
+        const isClickInsideNav = navLinks && navLinks.contains(event.target);
+        const isClickOnToggle = toggleButton && toggleButton.contains(event.target);
+        
+        if (navLinks && toggleButton && !isClickInsideNav && !isClickOnToggle && navLinks.classList.contains('active')) {
+            navLinks.classList.remove('active');
+            bars.forEach(bar => {
+                bar.classList.remove('active');
+            });
+        }
+    });
+});
+
 var slideIndex = 1;
 showSlides(slideIndex);
   
