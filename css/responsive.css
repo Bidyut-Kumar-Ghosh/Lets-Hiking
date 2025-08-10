@@ -145,13 +145,12 @@
     }
     
     .nav-links li a {
-        padding: 10px 15px;
-        font-size: 0.9rem;
-    }
-    }
-    
-    .search input {
-        width: 100%;
+         padding: 10px 15px;
+         font-size: 0.9rem;
+     }
+     
+     .search input {
+         width: 100%;
     }
     
     #btn10 {
