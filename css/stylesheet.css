@@ -2669,9 +2669,122 @@ ul{
     }
 }
 /* footer Style end*/
-.secimg{
-    /* border: 1px solid red; */
-    margin-bottom: -5px;
+/* Updated Social Links */
+.social-links {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+.social-links .social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 20px;
+}
+
+.social-links .social-link:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Newsletter Section */
+.newsletter-divider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    margin-top: -5px;
+}
+
+.newsletter-divider svg {
+    width: 100%;
+    height: 120px;
+}
+
+.sec10 {
+    position: relative;
+    background: linear-gradient(135deg, var(--primary-color), #8b6b2f);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+#h10 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#para10 {
+    font-size: 1.1em;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+}
+
+.search {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    gap: 10px;
+}
+
+#search1 {
+    flex: 1;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1em;
+    outline: none;
+}
+
+#btn10 {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+#btn10:hover {
+    background-color: #fff;
+    color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px) {
+    .sec10 {
+        padding: 60px 20px;
+    }
+    
+    #h10 {
+        font-size: 2em;
+    }
+    
+    .search {
+        flex-direction: column;
+    }
+    
+    #btn10 {
+        width: 100%;
+    }
 }
 
 /* Explore Section Styles */
